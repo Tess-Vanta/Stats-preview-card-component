@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px ;
+    color: white;
+    background-color: hsl(233, 47%, 7%);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    background-color: hsl(244, 38%, 16%);
+    flex-direction: row;
+    border-radius: 5px;
+    justify-content: center;
+    height: 50vh;
+    width: 80vw;
+}
+
+.image{
+    border-radius: 0 5px 5px 0;
+    background:  hsl(277, 64%, 61%);
+    width: 120%;
+}
+
+.image img {
+    mix-blend-mode: overlay;
+    width: 100%;
+    height: 100%;
+}
+
+.mobile {
+    display: none;
+}
+
+.content {
+    margin: 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sub-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.head {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.head span {
+    color: hsl(277, 64%, 61%);
+}
+
+.middle{
+    line-height: 1.5rem;
+    color:  hsla(0, 0%, 100%, 0.75);
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom ul {
+    font-size: 1.25rem;
+    list-style-type: none;
+}
+
+.stats {
+    font-weight: 400;
+    font-size: 12px;
+    padding-top: 5%;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 375px){
+	.container{
+        width: 90%;
+        height: 80%;
+        border-radius: 20px;
+        margin-bottom: 1rem;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .image{
+        flex: 1;
+        border-radius: 10px 10px 0 0 ;
+        width: 100%;
+    }
+    main{
+        padding: 20% 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100%;
+    }
+    .content{
+        text-align: center;
+        margin: 2.5rem ;
+        flex: 2;
+    }
+    .head {
+        padding-bottom: 1rem;
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    .middle{
+        padding-bottom: 1rem;
+    }
+
+    .bottom {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .bottom ul {
+        padding-bottom: 1rem;
+        font-size: 1.25rem;
+        list-style-type: none;
+    }
+    .stats{
+        padding: 2%;
+    }
+    footer{
+        position: relative;
+    }
+    
+}
